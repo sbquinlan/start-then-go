@@ -53,6 +53,3 @@ stg.start(
 ```
 
 There are a handful of these modules on NPM. I just wanted to add mine to the lot.
-
-## License
-
