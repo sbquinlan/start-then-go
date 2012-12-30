@@ -1,12 +1,11 @@
-var flow = require('start-then-go'),
+var stg = require('start-then-go'),
     should = require('should'),
     mocha = require('mocha');
 
-describe('flow', function() {
-  
+describe('stg', function() {
   describe('steps', function() {
     it('runs a single step', function (done) {
-      flow.start(
+      stg.start(
         function (_, next) {
           next.should.not.throw();
           done();
@@ -15,7 +14,7 @@ describe('flow', function() {
     });
     
     it('runs parallel steps', function (done) {
-      flow.start(
+      stg.start(
         function (_, next) {
           setTimeout(function() { next({prop2 : 1234}); }, 1000);
         },
@@ -33,7 +32,7 @@ describe('flow', function() {
     });
     
     it('throws overcompletion errors', function (done) {
-      flow.start(
+      stg.start(
         function (_, next) {
           next({});
           next.should.throw('Overcompletion: be sure each step only calls next() once.');
@@ -45,7 +44,7 @@ describe('flow', function() {
   
   describe('context', function() {
     it('saves a single property', function (done) {
-      flow.start(
+      stg.start(
         function (_, next) {
           next({ prop : 123});
         }
@@ -59,7 +58,7 @@ describe('flow', function() {
     });
 
     it('saves two properties', function (done) {
-      flow.start(
+      stg.start(
         function (_, next) {
           next({prop1 : 123});
         },
@@ -77,7 +76,7 @@ describe('flow', function() {
     });
 
     it('overwrites duplicate properties', function (done) {
-      flow.start(
+      stg.start(
         function (_, next) {
           next({ prop : 123 });
         },
