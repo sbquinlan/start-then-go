@@ -1,4 +1,4 @@
-var flow = require('flow'),
+var flow = require('start-then-go'),
     should = require('should'),
     mocha = require('mocha');
 

@@ -1,25 +1,26 @@
-# Flow.js -- simple JS flow control.
+# Start.Then.Go -- simple JS flow control.
 
 ## Install
 
 <pre>
-  npm install flow
+  npm install start-then-go
 </pre>
 
 Or from source:
 
 <pre>
-  git clone git://github.com/sbquinlan/flow.git 
-  cd flow
+  git clone git://github.com/sbquinlan/start-then-go.git 
+  cd start-then-go
   npm link
 </pre>
 
 ## Straightforward.
-
 I want to flatten my callbacks in an easy to read pipeline that supports parallelism (note that I'm not calling it concurrency).
 
 ```javascript
-flow.start(
+var stg = require('start-then-go');
+
+stg.start(
   function (_, next) {
     next({ user_id : 123});
   }
@@ -50,3 +51,8 @@ flow.start(
   }
 ).go();
 ```
+
+There are a handful of these modules on NPM. I just wanted to add mine to the lot.
+
+## License
+
