@@ -1,4 +1,4 @@
-var flow = require('./flow.js'),
+var flow = require('flow'),
     should = require('should'),
     mocha = require('mocha');
 
@@ -88,6 +88,7 @@ describe('flow', function() {
         function (prev, _) {
           prev.should.be.a('object')
             .and.have.property('prop', 1234);
+          done();
         }
       ).go();
     });
