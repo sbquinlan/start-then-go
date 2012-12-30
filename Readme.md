@@ -15,7 +15,7 @@ Or from source:
 </pre>
 
 ## Straightforward.
-I want to flatten my callbacks in an easy to read pipeline that supports parallelism (note that I'm not calling it concurrency).
+Flatten your callbacks into an easy to read pipeline that supports parallelism.
 
 ```javascript
 var stg = require('start-then-go');
