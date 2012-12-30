@@ -1,0 +1,15 @@
+{
+    "name"        : "flow"
+  , "version"     : "0.9.0"
+  , "description" : "simple, descriptive flow control"
+  , "keywords"    : ["flow", "control"]
+  , "author"      : "Sean Quinlan <squinlanesq@gmail.com>"
+  , "repository"  : { "type": "git", "url": "git://github.com/sbquinlan/flow.git" }
+  , "main"        : "./flow.js"
+  , "engines"     : { "node": ">= 0.4.0" }
+  , "scripts"     : { "test": "node test.js" }
+  , "dependencies" : {
+      "should" : "*"
+    , "mocha"  : "*"
+  }
+}
